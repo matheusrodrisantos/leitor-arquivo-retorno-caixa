@@ -1,8 +1,11 @@
 # Leitor de Arquivo Retorno
 
-Interpretador de arquivo retorno leiaute CNAB 240, COBRANÇA BANCÁRIA CAIXA - SIGCB
+Desenvolvido para verificação das ocorrências indicadas nos arquivos retornos.
 
-*Necessário servidor Apache, XAMPP ou WAMP
+*Necessário servidor Apache (XAMPP ou WAMP)
 
 *Dependendo do tamanho dos arquivos retornos será necessário modificar o arquivo php.ini (post_max_size, upload_max_filesize)
-	-Segue no projeto o arquivo php.ini já modificado
+	- Segue no projeto o arquivo php.ini já modificado
+	
+<b>Preview:</b><br>
+<img height="500" src="https://puu.sh/AfXO8/6fed9c4eef.png" />
