@@ -21,8 +21,8 @@
 	//DADOS EXIBIDOS NA TELA
 	echo "<h3><b>Arquivo:</b> ".$arquivo.
 		 "<br><b>Data:</b> ".$dia."/".$mes."/".$ano.
-		 "<br>Tamanho: ".round($tamanhoKB)." Kb 
-		  <br><b>Nº Linhas: ".$qtd_linhas."</b> 
+		 "<br><b>Tamanho:</b> ".round($tamanhoKB)." Kb 
+		  <br><b>Nº Linhas: </b>".$qtd_linhas." 
 		  <br><hr>Linha Verificada: ".$row."
 		  </h3>";
 ?>
