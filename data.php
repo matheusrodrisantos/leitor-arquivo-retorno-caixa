@@ -19,10 +19,11 @@
 	}	
 	
 	//DADOS EXIBIDOS NA TELA
-	echo "<h3><b>Arquivo:</b> ".$arquivo.
+	echo "<div class='card text-center border border-dark mt-2'>
+		  <h3><b>Arquivo:</b> ".$arquivo.
 		 "<br><b>Data:</b> ".$dia."/".$mes."/".$ano.
-		 "<br>Tamanho: ".round($tamanhoKB)." Kb 
-		  <br><b>Nº Linhas: ".$qtd_linhas."</b> 
-		  <br><hr>Linha Verificada: ".$row."
-		  </h3>";
+		 "<br><b>Tamanho:</b> ".round($tamanhoKB)." Kb 
+		  <br><b>Nº Linhas: </b>".$qtd_linhas." 		  
+		  <br><b>Linha Verificada: </b>".$row."</div>
+		  <br></h3>";
 ?>

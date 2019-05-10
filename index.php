@@ -10,7 +10,7 @@
 
 	<body>
 		<div class="container">
-			<form class="md-form text-center border border-light p-5" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+			<form class="md-form text-center card border border-info mb-0 p-5" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 				<p class="h4 mb-4">Importar Arquivo Retorno - CAIXA CNAB240</p>
 				<div class="file-field medium">
 					<div class="btn btn-rounded aqua-gradient"> 
@@ -21,49 +21,52 @@
 					  <input class="file-path validate" type="text" placeholder="Importe seu arquivo">
 					</div>
 				</div>
-				<input class="form-control mb-4" type="number" name="row" id="row" placeholder="Linha Específica"><br><br>
-				<input class="btn btn-info btn-block" type="submit" value="Revisar"><hr>
+				<input class="form-control mb-4" type="number" name="row" id="row" placeholder="Especificar Linha (Deixe em branco caso queira ler o arquivo todo)">
+				<input class="btn btn-lg btn-rounded aqua-gradient" type="submit" value="Revisar">
 			</form>
 		</div>
-		<?php
-			include('verifica.php');
-			
-			@$arquivo = $_FILES['arquivo']['name'];
-			@$arquivo = $_FILES['arquivo']['name'];
-			@$row = $_POST['row'];
-			
-			if($arquivo){
-				if(isset($arquivo)){
-					move_uploaded_file($_FILES['arquivo']['tmp_name'], $arquivo); //MOVE O ARQUIVO AO DIRETÓRIO
+		
+		<div class="container mt-5 border card border-info">
+			<?php
+				include('verifica.php');
+				
+				@$arquivo = $_FILES['arquivo']['name'];
+				@$arquivo = $_FILES['arquivo']['name'];
+				@$row = $_POST['row'];
+				
+				if($arquivo){
+					if(isset($arquivo)){
+						move_uploaded_file($_FILES['arquivo']['tmp_name'], $arquivo); //MOVE O ARQUIVO AO DIRETÓRIO
+					}
+					
+					include('data.php');
+					
+					$arq  = fopen('c:\\xampp\htdocs\leitor/'.$arquivo, 'r');
+					$num_row = 0; //NUMERO DA LINHA
+					
+					/****************************LEITURA DO ARQUIVO*****************************************/
+					while(!feof($arq)){ //Enquanto nao atingir o fim do arquivo
+						$num_row++;
+						$linha = fgets($arq); // cria um array com o conteudo da linha atual do arquivo 
+						
+						if($row == 'Linha Não Informada'){
+							include('all_rows.php');						
+						}
+					}//FIM WHILE (END OF FILE)					
+					include('one_row.php');
+				}else{
+					echo "<h2>Nenhum Arquivo Selecionado</h2>";
 				}
 				
-				include('data.php');
 				
-				$arq  = fopen('c:\\xampp\htdocs\leitor/'.$arquivo, 'r');
-				$num_row = 0; //NUMERO DA LINHA
-				
-				/****************************LEITURA DO ARQUIVO*****************************************/
-				while(!feof($arq)){ //Enquanto nao atingir o fim do arquivo
-					$num_row++;
-					$linha = fgets($arq); // cria um array com o conteudo da linha atual do arquivo 
-					
-					if($row == 'Linha Não Informada'){
-						include('all_rows.php');						
-					}
-				}//FIM WHILE (END OF FILE)					
-				include('one_row.php');
-			}else{
-				echo "<h2>Nenhum Arquivo Selecionado</h2>";
-			}
-			
-			
-			/*	FUNÇÃO SUBSTR
-				substr($var, v1, v2);
-				$var = string a ser percorrida
-				v1 = onde começa a string
-				v2 = numero de caracteres a serem capturados		
-			*/
-		?>
+				/*	FUNÇÃO SUBSTR
+					substr($var, v1, v2);
+					$var = string a ser percorrida
+					v1 = onde começa a string
+					v2 = numero de caracteres a serem capturados		
+				*/
+			?>
+		</div>
 	  <!-- JQuery -->
 		<script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script>
 		<!-- Bootstrap core JavaScript -->
