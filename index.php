@@ -9,20 +9,21 @@
 	</head>
 
 	<body>
-		<div class="container">
-			<form class="md-form text-center card border border-info mb-0 p-5" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+		<div class="container col-md-8">
+			<form class="text-center card top mt-2 border border-info p-5" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
 				<p class="h4 mb-4">Importar Arquivo Retorno - CAIXA CNAB240</p>
-				<div class="file-field medium">
+				
+				<div class="file-field medium mb-4">			
 					<div class="btn btn-rounded aqua-gradient"> 
-						<span>Selecione o arquivo</span>
+						<span class="h6">Selecione o arquivo</span>
 						<input type="file" name="arquivo" id="arquivo"> 			
 					</div>
 					<div class="file-path-wrapper">
 					  <input class="file-path validate" type="text" placeholder="Importe seu arquivo">
 					</div>
-				</div>
-				<input class="form-control mb-4" type="number" name="row" id="row" placeholder="Especificar Linha (Deixe em branco caso queira ler o arquivo todo)">
-				<input class="btn btn-lg btn-rounded aqua-gradient" type="submit" value="Revisar">
+				</div>	
+				
+				<button class="btn btn-info btn-rounded aqua-gradient h6" type="submit">Revisar</button>				
 			</form>
 		</div>
 		
@@ -48,12 +49,11 @@
 					while(!feof($arq)){ //Enquanto nao atingir o fim do arquivo
 						$num_row++;
 						$linha = fgets($arq); // cria um array com o conteudo da linha atual do arquivo 
+
+						include('all_rows.php');						
 						
-						if($row == 'Linha Não Informada'){
-							include('all_rows.php');						
-						}
-					}//FIM WHILE (END OF FILE)					
-					include('one_row.php');
+					}//FIM WHILE (END OF FILE)		
+									
 				}else{
 					echo "<h2>Nenhum Arquivo Selecionado</h2>";
 				}

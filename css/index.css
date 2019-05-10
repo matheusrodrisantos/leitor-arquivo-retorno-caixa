@@ -2,6 +2,14 @@ body {
 	background-color: #eee;
 }
 
+.btn {	
+    font-size: 1.2rem;
+}
+
+.card.top {
+	display: flex;
+}
+
 .card {
 	display: block;
 }
