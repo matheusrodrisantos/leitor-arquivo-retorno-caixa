@@ -26,7 +26,7 @@
 			</form>
 		</div>
 		
-		<div class="container mt-5 border border-info">
+		<div class="container mt-5 border card border-info">
 			<?php
 				include('verifica.php');
 				

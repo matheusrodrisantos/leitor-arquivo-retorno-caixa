@@ -2,6 +2,10 @@ body {
 	background-color: #eee;
 }
 
+.card {
+	display: block;
+}
+
 /* NAVBAR */
 .navbar {
     background-color: white;
