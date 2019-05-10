@@ -13,17 +13,11 @@
 	//Quantidade de linhas do arquivo
 	$qtd_linhas = count(file($arquivo));
 	
-	//Linha Verificável
-	if(!$row){
-		$row = 'Linha Não Informada';
-	}	
-	
 	//DADOS EXIBIDOS NA TELA
 	echo "<div class='card text-center border border-dark mt-2'>
 		  <h3><b>Arquivo:</b> ".$arquivo.
 		 "<br><b>Data:</b> ".$dia."/".$mes."/".$ano.
 		 "<br><b>Tamanho:</b> ".round($tamanhoKB)." Kb 
 		  <br><b>Nº Linhas: </b>".$qtd_linhas." 		  
-		  <br><b>Linha Verificada: </b>".$row."</div>
-		  <br></h3>";
+		  </div><br></h3>";
 ?>
