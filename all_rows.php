@@ -43,5 +43,5 @@
 			echo "<br>".$num_row;
 			ver_segmento($segmento);
 		}
-	}//FIM IF LINHAS DEPOIS DE 2
+	}//FIM IF LINHAS DEPOIS DE 2	
 ?>
