@@ -8,4 +8,4 @@ Desenvolvido para verificação das ocorrências indicadas nos arquivos retornos
 	- Segue no projeto o arquivo php.ini já modificado
 	
 <b>Preview:</b><br>
-<img height="500" src="https://puu.sh/AfXO8/6fed9c4eef.png" />
+<img height="500" src="https://i.ibb.co/T87Z9Mw/image.png" />

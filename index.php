@@ -1,17 +1,30 @@
-<html>
+<html lang="pt-br">
 	<head>
-		<meta charset="UTF-8">
 		<title>Retorno CAIXA CNAB240</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/libs/font-awesome.min.css">
+		<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+		<link rel="stylesheet" href="css/libs/mdb.min.css">
+		<link rel="stylesheet" href="css/index.css">
 	</head>
 
 	<body>
-		<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-			<input type="file" name="arquivo" id="arquivo"><br><br> 
-			<label>Linha: </label>
-			<input type="number" name="row" id="row"><br><br>
-			<input type="submit" value="Revisar"><hr>
-		</form>
-
+		<div class="container">
+			<form class="md-form text-center border border-light p-5" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+				<p class="h4 mb-4">Importar Arquivo Retorno - CAIXA CNAB240</p>
+				<div class="file-field medium">
+					<div class="btn btn-rounded aqua-gradient"> 
+						<span>Selecione o arquivo</span>
+						<input type="file" name="arquivo" id="arquivo"> 			
+					</div>
+					<div class="file-path-wrapper">
+					  <input class="file-path validate" type="text" placeholder="Importe seu arquivo">
+					</div>
+				</div>
+				<input class="form-control mb-4" type="number" name="row" id="row" placeholder="Linha Específica"><br><br>
+				<input class="btn btn-info btn-block" type="submit" value="Revisar"><hr>
+			</form>
+		</div>
 		<?php
 			include('verifica.php');
 			
@@ -51,5 +64,13 @@
 				v2 = numero de caracteres a serem capturados		
 			*/
 		?>
+	  <!-- JQuery -->
+		<script type="text/javascript" src="js/libs/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+		<!-- MDB core JavaScript -->
+		<script type="text/javascript" src="js/libs/mdb.min.js"></script>
+		<!-- Your custom commands (optional) -->
+		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>

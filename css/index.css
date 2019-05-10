@@ -1,0 +1,125 @@
+/* NAVBAR */
+.navbar {
+    background-color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #6B061A;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+    background-color: #6B061A;
+    border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+    .navbar.scrolling-navbar.top-nav-collapse {
+        background-color: rgba(255,255,255,0.8);
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+/* SLIDE PRINCIPAL */
+@media only screen and (max-width: 500px) {
+    .navbar-brand{
+        margin-left: 13%;
+    }
+}
+
+.seta-esq, .seta-dir {
+    position: absolute;
+    bottom: 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.seta-esq {
+    left: 1.5%;
+}
+
+.seta-dir {
+    right: 1.5%;
+}
+
+/* CAROUSEL DE VÍDEOS - AJUDA */
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 25%; } }
+
+.carousel-multi-item-2 .card img {
+    border-radius: 5px; }
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active{
+    background-color: #AE191A;
+}
+
+/* CONFIGURAÇÕES PADRÕES */
+.bg-nugov {
+    background-color: #b71c1c;
+}
+.nugov-text {
+    color: #b71c1c;
+}
+
+.divgrey {
+    background-color: #f9f9f9;
+}
+
+.link .view .overlay{
+    cursor: pointer;
+}
+
+/* PORCENTAGEM DO DIFERENCIAL */
+.circulo {
+    margin: 6px 6px 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.circulo canvas {
+    vertical-align: top;
+}
+
+.circulo strong {
+    color: black;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 40px;
+}
+
+.circulo strong i {
+    font-style: normal;
+    font-size: 0.6em;
+    font-weight: normal;
+}
+
+.card .card-circle, .card-overlay, .flex-center, .section.team-section .avatar, .testimonial-carousel .testimonial .avatar {
+    height: auto;
+}
+
+/* PERGUNTAS */
+.accordion .card .card-header {
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
