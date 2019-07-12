@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/libs/bootstrap.min.css">
 		<link rel="stylesheet" href="css/libs/mdb.min.css">
 		<link rel="stylesheet" href="css/index.css">
+		<link href="cnab.ico" rel="icon" />
 	</head>
 
 	<body>
