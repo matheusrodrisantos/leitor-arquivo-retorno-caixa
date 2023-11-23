@@ -43,7 +43,7 @@
 					
 					include('data.php');
 					
-					$arq  = fopen('c:\\xampp\htdocs\leitor/'.$arquivo, 'r');
+					$arq  = fopen(__DIR__.'/'.$arquivo, 'r');
 					$num_row = 0; //NUMERO DA LINHA
 					
 					/****************************LEITURA DO ARQUIVO*****************************************/
